@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src=”../JAVASCRIPT/teatro.js” type=”text/JavaScript”></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../CSS/teatro.css">
+<title>PRENOTAZIONE</title>
+
+</head>
+<body>
+<div id="offusco">
+</div>
+<header>
+<h2>L'ANFITEATRO</h2>
+</header>
+  <nav id="menu">
+                   <ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="Programmazione.html">Programmazioni passate</a></li>
+						<li><a href="Prenotazione.html">Prenotazione</a></li>	
+						<li><a href="Contatti.html">Contatti</a></li>
+					</ul>
+		     </nav>
+<div id="log">
+<a href="Accedi.html" id="accede">Accedi</a> e/o <a href="Registrazione.html"> Registrati</a>
+</div>			 
+<div id="prenota">
+<h3>Prenotazione</h3>
+<form name="mio" action="login.php" method="POST">
+<input type="text" name="name" size="20" maxlength="10" value="" placeholder="Nome" > Nome
+<br/>
+<br/>
+<input type="text" name="surname" size="20" maxlength="10" value="" placeholder="Cognome" > Cognome
+<br/>
+<br/>
+<input type="text" name="adress" size="20" maxlength="15" value="" placeholder="Indirizzo" > Indirizzo
+<input type="text" name="cell" size="20" maxlength="15" value="" placeholder="Telefono" > Telefono
+<br/>
+<br/>
+<input type="number" name="numeri" size="20" value=""> Numero di persone
+<input type="email" name="mail" value="" placeholder="Mail"> Mail
+<br/>
+<br/>
+<textarea name="testo" cols="100" rows="5" placeholder="Scrivi qui il tuo messaggio" ></textarea>
+
+<input type="submit" name="sub" value="Invia">
+<input type="reset" name="rest" value="Reset">
+</form>
+<span id="apri" >
+<button onclick="document.getElementById('modal').style.display='block'; document.getElementById('offusco').style.display='block';">Apri finestra modale</button>
+</span>
+
+<div id="modal" class="modal">
+ <div class="modal-wrap">
+ <input type="email" id="email" placeholder="Inserisci la tua mail">
+ <br/>
+ <br/>
+ <input type="password" id="password" placeholder="Inserici la tua password">
+ <br/>
+ <br/>
+ <button id="login">Login</button>
+ <button onclick="document.getElementById('modal').style.display='none'; document.getElementById('offusco').style.display='none'";>Chiudi finestra modale</button>
+ </div>
+ </div>
+
+
+ 
+</div>
+</body>
+</html>

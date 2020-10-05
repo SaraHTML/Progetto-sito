@@ -1,0 +1,91 @@
+<body>
+<div id="offusco">
+</div> 
+
+( a volte può servire, vado a metterlo in tutte le pagine ( io no....))
+
+CSS
+
+{
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+min-height: 100%;
+min-width: 100%;
+background-color: grey;
+opacity: 0.5;
+z-index: 50;
+display: none; /*per il momento non si deve vedere */
+}
+
+#login_link{ /*guarda nella cartella originale del sito */
+
+cursor: pointer;}
+
+il none è da mettere anche alla modale 
+
+JAVASCRIp
+
+  /* per vedere o nascondere la modale */
+  
+$(document).ready(function(){
+var modal_window = $("#modal");   
+
+$("#login").click(function)
+$("#offusco").show();
+$(modal_window).show("slow");
+});
+
+$("#offusco").click(function(event)
+{if(event.target!=modal_window){$("#offusco").hide();
+$(modal_window).hide("slow");}  /* serve anche per metterla da parte se si apre per errore */
+
+});
+
+
+$(#login_btn).click(function()){
+var email =$("#email").val();
+var pwd = $("#password").val();
+
+if(!email /*se email è vuota */|| !pwd || email.lenght < 5 || pwd.lenght <5){  /* questo mi sa che fa inviare i dati con AJAX */
+alert("Devi inserire tutti i campi");
+return false;
+} else{
+$ajax({
+url: "login.php",
+type: "POST",
+data: JSON.stringify({mail: emai, password: pwd}),
+success: function(response){
+if(response && res.resp=="OK")
+location.href = "Prenotazione.html");
+},
+}
+error: function(){
+console.log("ERROR");
+}
+});
+}
+});
+
+
+});
+
+---------------------
+<button id="login_btn">Login</button>
+-----------------
+/da mettere nel teatro.js all'inizio eventualmente per farlo sparire con "stile" /
+
+$("#log").click(function)
+$("#offusco").show();
+$(modal_window).show("slow");
+});
+
+$("#offusco").click(function(event)
+{if(event.target!=modal_window){$("#offusco").hide();
+$(modal_window).hide("slow");}  /* serve anche per metterla da parte se si apre per errore */
+
+});
+
+ho perso epzzi, ha per caso creato una span nell'elemento login?

@@ -1,0 +1,375 @@
+body{
+background-image: url('../IMAGES/pexels-donald-tong-109669.jpg');
+ background-attachment: fixed;
+ background-size: 100% 100%;
+
+}
+
+h2{
+font-family: Informal Roman;
+font-size: 40px;
+color: red;
+text-align: center;
+}
+
+p{
+font-family: Calibri;
+font-size:16px;
+font-weight: bold;
+}
+
+/*sezioni */
+
+#log{
+top: 5.8em;
+ position: absolute;
+  left: 46em;
+  
+	font-family: Calibri;
+	font-size: 20px;
+	height: 2em;
+	background-color:#ffa500 ;
+	border: 3px solid #e31717;
+	border-radius: 5px;
+	height: 2em;
+	width: 10em;
+	color: #8f001d;
+	padding-left: 25px;
+	cursor: pointer;
+
+}
+
+#registro{
+position: absolute;
+left:2em;
+top: 15em;
+font-size: 15px;
+width: 30em;
+height: 10em;
+background-color: #ffa500;
+border-radius: 5px;
+text-align: left;
+padding: 2em 2em;
+	border: 3px solid #e31717;
+}
+
+#accedi{
+position: absolute;
+left: 2em;
+top: 15em;
+font-size: 15px;
+width: 30em;
+height: 15em;
+background-color: #ffa500;
+border-radius: 5px;
+	border: 3px solid #e31717;
+text-align: left;
+padding: 2em 2em 2em 2em;
+}
+
+#prenota{
+position: absolute;
+left:30px;
+top: 13em;
+font-size: 15px;
+width: 80em;
+height: 20em;
+background-color: #ffa500;
+border-radius: 5px;
+text-align: left;
+padding: 2em 2em 2em 2em;
+border: 3px solid #e31717;
+}
+
+
+#teatro{
+position: absolute;
+width:15em;
+height: 7em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 35em;
+border-radius: 5px;
+padding-left: 2em;
+}
+
+#stagione{
+position: absolute;
+width:60em;
+height: 20em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 45em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+}
+
+
+#strada{
+position: absolute;
+width:60em;
+height: 17em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 68em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+}
+
+
+#contatto{
+position: absolute;
+width:60em;
+height: 17em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 15em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+}
+
+
+#s20{
+position: absolute;
+width:60em;
+height: 30em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 15em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+
+}
+
+#s19{
+position: absolute;
+width:60em;
+height: 28em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 15em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+
+}
+
+#s18{
+position: absolute;
+width:60em;
+height: 28em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 15em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+
+}
+
+#s17{
+position: absolute;
+width:60em;
+height: 26em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 15em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+
+}
+
+
+#s1{
+position: absolute;
+width:60em;
+height: 18em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 25em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+
+}
+
+#s2{
+position: absolute;
+width:60em;
+height: 18em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 45em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+
+}
+
+#s3{
+position: absolute;
+width:60em;
+height: 18em;
+background-color: #ffa500;
+border: 3px solid #e31717;
+left: 2em;
+top: 65em;
+border-radius: 5px;
+text-align: left;
+padding-left: 2em;
+
+}
+
+#offusco{
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+min-height: 100%;
+min-width: 100%;
+background-color: orange;
+opacity: 0.5;
+z-index: 50;
+display: none;
+}
+
+#apri{
+padding: 5px 2px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  position: absolute;
+  left: 56em;
+  top: 3em;
+}
+
+ .modal{
+ /* display: none;*/
+ position: fixed;
+ z-index: 100;
+ padding-top: 50px;
+ padding-left: 50px;
+ top: 35%;
+ left: 40%;
+ overflow: auto;
+ height: 18vh;
+ width: 20vw;
+ background-color: #cc8400;
+ border: 2px solid red;
+ border-radius: 5px;
+display: none;
+ }
+
+ #email{
+ border: 2px solid red; 
+ border-radius: 5px;
+ }
+ 
+  #password{
+ border: 2px solid red;
+  border-radius: 5px;
+ }
+ 
+ 
+/* Immagini */
+
+img#carmen{
+width: 15em;
+height: 9em;
+float: left;
+left: 2em;
+margin: 2em 2em;
+}
+
+img#shake{
+width: 15em;
+height: 9em;
+float: left;
+margin-right: 2em;
+}
+
+img#carol{
+width: 15em;
+height: 9em;
+float: left;
+margin-right: 2em;
+top: 34em;
+}
+
+img#pirate{
+width: 15em;
+height: 9em;
+float: left;
+margin-right: 2em;
+top: 54em;
+}
+
+img#freccia{
+position: absolute;
+width: 5em;
+height: 3em;
+top: 2em;
+left: 45em;
+}
+
+
+/*menù*/
+
+.elenco{
+position: absolute;
+width:15em;
+height: 5em;
+background-color: #ffa500;
+text-decoration: none;
+padding: 0.5em 0.5em 0.5em 0.5em;
+border: 3px solid #e31717;
+left: 2em;
+border-radius: 5px;
+font-size: 13pt;
+}
+
+
+#menu ul{
+    margin-top: 30px;
+	margin-left: 25px;
+	font-family: Calibri;
+	font-size: 20px;
+	height: 2em;
+	background-color:#ffa500 ;
+	border: 3px solid #e31717;
+	border-radius: 5px;
+	height: 2em;
+	width: 40em;
+}
+
+#menu li{
+	display: inline;
+	padding: 0 1.8em;	
+} 
+
+#menu a{
+	text-decoration: none;
+	color: #8f001d;	
+ }
+
+#menu li a:hover{
+	color: #1717e3;
+
+    } 
+	  

@@ -1,0 +1,207 @@
+<html lang="it">
+<body>
+<div id="main-container">
+<header>
+<h1> Teatro </h1>
+/*la lista la racchiuderei dentro un nav */
+<nav>
+<ul>
+<li>
+<a href="login.html">Login</a>
+</li>
+</ul>
+</nav>
+</header>
+<section>
+<div class="row">
+<div class="col-8">
+</div>
+<div class="col-2">
+</div>
+</div>
+</section>
+<footer>
+Teatro opera, via tizio caio, 5, londra 
+</footer>
+</div>
+
+<div id="container">
+<div id="primo_div">
+Primo div 
+</div>
+<div id="secondo_div">
+Secondo div 
+</div>
+</div>
+</body>
+
+
+/* posso creare più css, uno per tutto il sito e uno magari per le diverse pagine, quindi mettere più riferimeni a css esterni nella head delle pagine */ ( ricordati il comando @import)
+
+in index.css ( ad esempio)
+
+@import "./main.css";
+
+#main-container{
+min-height: 100vh;
+overflow: hidden;
+position: relative;
+padding-bottom: 50px /* questo ci permette di tenere il footer al di fuori  della nostra pagina , sennò le colonne della sezione centrale gli sarebbero andate dietro */
+}
+
+header {
+position: realtive;
+max-width: 100%;
+height: 50px;
+margin: 0px;
+padding: 0.5rem 1 rem;
+background-color: red;
+color: white;
+ /*pensa un pò se vuoi bordare pure il font inun gioco di bordi e ombre */
+}
+
+header h1 {
+float: left;
+font-size: 1.5rem;
+margin: 0px; /* se non li specifici tu, i margini li darà il browser */
+}
+
+nav {
+list-style: none;
+float: right;
+
+}
+
+headr nav ul{
+margin: 7px 0px 0px 0px;
+list-style-type: none;
+}
+
+.row{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+min-height: 100%;
+}
+
+.col-8{
+width: calc(80% -10px);
+margin: 0px 0px 10px 10px;
+}
+
+.col-2{
+width: calc(20% -10px);
+margin: 0px 0px 0px 10px;
+border-left: 1px solid;
+height: calc(100vh -100px);
+
+}
+footer{
+position: absolute;
+bottom: 0px;
+height: 50px;
+width: 100%;
+background-color: red;
+color: white;
+padding-left: 10px;
+}
+
+@media screen and (max-width: 680px){ /* se la larghezza del nostro schermo è questo, quando si riduce con lo scrollo e la finestra, quella sezione si toglie */
+
+.col-8{
+width: calc (100% - 10px);
+}
+.col-2{
+width: calc (100% - 10px);
+border: none;
+}
+}
+
+
+
+
+/* main css */
+
+*{
+box-sizing: border-box;
+
+}
+
+html, body{
+height: 100%;
+position: relative;
+margin: 0px;
+padding: 0px;
+}
+
+
+/*pagina Login */
+
+box centrale verticale, bordi arrotondati
+
+<body>
+<div id="container">
+<div>
+<form method="POST" action="login.php" name="login_form">
+<table>
+<tr>
+<td>
+<label for="email">Email</label>
+</td>
+<td>
+<input type="email" name="email" id="email" placeholder="Inserisci la tua mail">
+</td>
+<td>
+<label for="password">Password</label>
+</td>
+<td>
+<input type="password" name="password"> 
+</td>
+</tr>
+
+
+<button typw="submit">Login</button>
+<br/>
+<br/>
+Non sei ancora registrato? <a href="Registrazione.html">Registrati</a>
+<br/>
+<br/>Hai dimenticato la Password?<span> Richiedi nuova password</span>
+
+/* quello che va dentro al for è l'id dell'elemento, non il name. DObbiamo abituarci a usare label perchè boostrap ne farà largo uso. PEr allineare tutto, il modo più semplice è la tabella*/
+
+</form>
+</div>
+</div>
+</body>
+
+</html>
+
+#body{
+background-color: floralwhite;
+}
+
+#container{
+margin: 10px;
+padding: 10px;
+display: flec;
+flex-direction: row;
+justify-content: center;
+align-items: center; /*align èer allineare orrizontalmente */
+
+}
+
+#container div {border: 1px solid #CCCCCC;
+border-radius: 4px;
+padding: 10px;
+background-color: white;
+}
+
+header nav ul li a{
+color: #FFFFFF;
+text-decoration: none;
+}
+
+#container table td{
+padding: 10px;
+}
