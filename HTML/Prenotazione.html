@@ -1,72 +1,183 @@
-<!DOCTYPE html>
-<html>
-<head>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src=”../JAVASCRIPT/teatro.js” type=”text/JavaScript”></script>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../CSS/teatro.css">
-<title>PRENOTAZIONE</title>
+    <!DOCTYPE html>
+<html lang="it">
 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+<meta name="description" content="Prenotazione degli spettacoli previa registrazione a accensione al sito e immissione di dati personali." />
+<title>Prenotazione</title>
+    <link rel="stylesheet" type="text/css" href="../PLUGIN/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../CSS/teatro.css">
+
+
+    <script src="../PLUGIN/jquery/jquery-3.5.1.min.js"></script>
+    <script src="../PLUGIN/popper/popper.min.js"></script>
+    <script src="../PLUGIN/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div id="offusco">
-</div>
-<header>
+
 <h2>L'ANFITEATRO</h2>
-</header>
-  <nav id="menu">
-                   <ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="Programmazione.html">Programmazioni passate</a></li>
-						<li><a href="Prenotazione.html">Prenotazione</a></li>	
-						<li><a href="Contatti.html">Contatti</a></li>
-					</ul>
-		     </nav>
-<div id="log">
-<a href="Accedi.html" id="accede">Accedi</a> e/o <a href="Registrazione.html"> Registrati</a>
-</div>			 
+   
+<div id="main-container" class="container-fluid m-0 p-0">
+        <nav class="navbar navbar-expand-lg navbar-light" id="barra">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+			 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-tabs">
+				<li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                
+					 <li class="nav-item dropdown" class="menu">
+                        <a class="nav-link dropdown-toggle" href="Programmazione.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Programmazioni passate
+                  </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Programmazione.html">Archivio Completo</a>
+							<a class="dropdown-item" href="Stagione19.html">Stagione Teatrale 2019</a>
+                            <a class="dropdown-item" href="Stagione18.html">Stagione Teatrale 2018</a>
+							<a class="dropdown-item" href="Stagione17.html">Stagione Teatrale 2017</a>
+                           
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Prenotazione.html">Prenotazione spettacoli</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="Contatti.html">Contatti</a>
+                    </li>
+                </ul>
+            </nav> 
+				  <footer>
+            Teatro L'Anfiteatro , via di Quandomai, 07 - Roma (RO)
+			<img src="../IMAGES/copyright.png" id="copy"/>
+        </footer>
+			</div>
+ <div id="log">
+<a href="Accedi.html" id="accede"> Accedi</a> e/o <a href=".Registrazione.html"> Registrati</a>
+</div>	
+
+
+			</div>
+			
+	<span id="apri" >
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+ Apri la modale
+</button>
+</span>		
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login
+        </h5>
+      </div>
+      <div class="modal-body">
+        <div class="col-sm-10">
+      <input type="email" class="form-control form-control-sm" id="inputEmail4" placeholder="Inserisci la tua mail" value="">
+    </div>
+	
+	<br/>
+	   <div class="col-sm-10">
+      <input type="password" class="form-control form-control-sm" id="inputPassword4" placeholder="Inserici la tua password" value="">
+    </div>
+	
+            </div>
+            <div class="modal-footer">
+               <button type="submit" class="btn btn-primary" id="Login">Accedi</button>
+			   <button class="close" type="button" data-dismiss="modal" aria-label="Close" onclick="document.getElementById('modal').style.display='none'"
+			   ;>Chiudi </button>
+			   
+            </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="toast" role="alert" id="mio_toast" data-delay="10000">
+        <div class="toast-header">
+            <h3>Errore</h3>
+        </div>
+        <div class="toast-body">
+
+        </div>
+    </div>
+		
+			
+
+		 
 <div id="prenota">
 <h3>Prenotazione</h3>
-<form name="mio" action="login.php" method="POST">
-<input type="text" name="name" size="20" maxlength="10" value="" placeholder="Nome" > Nome
-<br/>
-<br/>
-<input type="text" name="surname" size="20" maxlength="10" value="" placeholder="Cognome" > Cognome
-<br/>
-<br/>
-<input type="text" name="adress" size="20" maxlength="15" value="" placeholder="Indirizzo" > Indirizzo
-<input type="text" name="cell" size="20" maxlength="15" value="" placeholder="Telefono" > Telefono
-<br/>
-<br/>
-<input type="number" name="numeri" size="20" value=""> Numero di persone
-<input type="email" name="mail" value="" placeholder="Mail"> Mail
-<br/>
-<br/>
-<textarea name="testo" cols="100" rows="5" placeholder="Scrivi qui il tuo messaggio" ></textarea>
-
-<input type="submit" name="sub" value="Invia">
-<input type="reset" name="rest" value="Reset">
-</form>
-<span id="apri" >
-<button onclick="document.getElementById('modal').style.display='block'; document.getElementById('offusco').style.display='block';">Apri finestra modale</button>
-</span>
-
-<div id="modal" class="modal">
- <div class="modal-wrap">
- <input type="email" id="email" placeholder="Inserisci la tua mail">
- <br/>
- <br/>
- <input type="password" id="password" placeholder="Inserici la tua password">
- <br/>
- <br/>
- <button id="login">Login</button>
- <button onclick="document.getElementById('modal').style.display='none'; document.getElementById('offusco').style.display='none'";>Chiudi finestra modale</button>
- </div>
- </div>
-
-
+<section>
+<form action="login.php" method="POST">
+  <div class="form-row">
+   <div class="form-group col-md-6">
+                            <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm" id="nome" placeholder="Inserire il nome" title="Qui andrebbe il nome" data-toggle="tooltip" data-placement="bottom" data-html="true">
+                            </div>
+                         </div>
+						
+						<div class="form-group col-md-6">
+                        <label for="cognome" class="col-sm-2 col-form-label">Cognome</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control form-control-sm" id="cognome" placeholder="Inserire il cognome" title="Qui andrebbe il cognome" data-toggle="tooltip" data-placement="bottom" data-html="true">
+                            </div>
+						</div>
+						
+    <div class="form-group col-md-6">
+      <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
+	  <div class="col-sm-10">
+      <input type="email" class="form-control form-control-sm" id="inputEmail4">
+    </div>
+	</div>
+	
+    <div class="form-group col-md-6">
+      <label for="inputPassword4" class="col-sm-2 col-form-label">Password</label>
+	   <div class="col-sm-10">
+      <input type="password" class="form-control form-control-sm" id="inputPassword4">
+    </div>
+	</div>
+	
+	
+	 <div class="form-group col-md-6">
+    <label for="inputAddress" class="col-sm-2 col-form-label">Indirizzo</label>
+	<div class="col-sm-10">
+    <input type="text" class="form-control form-control-sm" id="inputAddress" placeholder="es: via dei Corsi 50, VR">
+  </div>
+	</div>
+	
+	 <div class="form-group col-md-6">
+    <label for="phone" class="col-sm-2 col-form-label">Telefono</label>
+	<div class="col-sm-10">
+    <input type="tel" class="form-control form-control-sm" id="phone">
+  </div>
+	</div>
+	
+	 <div class="form-group col-md-6">
+    <label for="numberPeople" class="col-sm-2 col-form-label">Presenze</label>
+	<div class="col-sm-10">
+    <input type="number" class="form-control form-control-sm" id="numberPeople">
+  </div>
+	</div>
+	 </div>
+	 
+  <button type="submit" class="btn btn-primary">Invia</button>
  
-</div>
+ 
+</form>
+
+
+
+</section>
+
+    <script src="../JAVASCRIPT/login.js"></script>
+
 </body>
 </html>

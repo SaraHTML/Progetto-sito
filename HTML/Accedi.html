@@ -1,41 +1,92 @@
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+<html lang="it">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../CSS/teatro.css">
-<title>ACCEDI</title>
+    <meta charset="UTF-8">
+<meta name="description" content="Sezione per loggarsi al sito del teatro e accedere così alle funzionalità di prenotazione degli spettacoli." />
+<title>Accedi</title>
+    <link rel="stylesheet" type="text/css" href="../PLUGIN/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../CSS/teatro.css">
+
+
+    <script src="../PLUGIN/jquery/jquery-3.5.1.min.js"></script>
+    <script src="../PLUGIN/popper/popper.min.js"></script>
+    <script src="../PLUGIN/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<header>
-
-</header>
-  <nav id="menu">
-                   <ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="Programmazione.html">Programmazione passate</a></li>
-						<li><a href="Prenotazione.html">Prenotazione</a></li>
-						<li><a href="Contatti.html">Contatti</a></li>
-					</ul>
-		     </nav>
-<div id="accedi">
-<p> Accedi </p>
-<form name="mio" action="login.php" method="POST">
-<input type="text" name="name" size="20" maxlength="10" value="" placeholder="Nome" ><label for="name">Nome</label>
-<br/>
-<br/>
-<input type="password" name="pwd" value=""><label for="pwd">Psw </label>
-<br/>
-<br/>
-<input type="submit" name="sub" value="Accedi">
-<input type="reset" name="rest" value="Reset">
-<br/>
+<h2>L'ANFITEATRO</h2>
+   
+<div id="main-container" class="container-fluid m-0 p-0">
+        <nav class="navbar navbar-expand-lg navbar-light" id="barra">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+			 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-tabs">
+				<li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                
+					 <li class="nav-item dropdown" class="menu">
+                        <a class="nav-link dropdown-toggle" href="Programmazione.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Programmazioni passate
+                  </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Programmazione.html">Archivio Completo</a>
+							<a class="dropdown-item" href="Stagione19.html">Stagione Teatrale 2019</a>
+                            <a class="dropdown-item" href="Stagione18.html">Stagione Teatrale 2018</a>
+							<a class="dropdown-item" href="Stagione17.html">Stagione Teatrale 2017</a>
+                           
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Prenotazione.html">Prenotazione spettacoli</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="Contatti.html">Contatti</a>
+                    </li>
+                </ul>
+            </nav> 
+				  <footer>
+            Teatro L'Anfiteatro , via di Quandomai, 07 - Roma (RO)
+			<img src="../IMAGES/copyright.png" id="copy"/>
+        </footer>
+			</div>
+			</div>
+			
+<section>
+ <div id="accedi">
+<h3> Accedi</h3>			
+<div class="row">
+                <div class="col col-sm-12 col-md-12 col-lg-8">
+                    <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <br/>
 <br/>
 Hai dimenticato la password?<a href="Nuovo.html"> Richiedi nuova password </a>
 <br/>
 <br/>
 Non sei ancora registrato?<a href="Registrazione.html"> Registrati</a>
 </form>
+					</div>
 </div>
+  </div>
+</section>
+		<footer>
+            Teatro L'Anfiteatro , via di Quandomai, 07 - Roma (RO)
+			<img src="../IMAGES/copyright.png" id="copy"/>
+        </footer>    
+			 
 </body>
 </html>

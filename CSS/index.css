@@ -1,0 +1,39 @@
+@import "./main.css";
+
+#main-container {
+    padding-bottom: 50px!important;
+}
+
+footer {
+    position: absolute;
+	top: 100em;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: burlywood;
+    color: #a52a2a;
+    padding-left: 10px;
+}
+
+#mio_toast {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1100;
+}
+
+#mio_menu a::after {
+    content: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
